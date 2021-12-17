@@ -1,0 +1,325 @@
+* { padding:0; margin:0; outline:0; }
+body {
+    background:#fff;
+    font-family: Arial, sans-serif;
+    font-size:12px;
+    line-height:17px;
+    color:#6f6e6e;
+}
+input, textarea, select { font-family: Arial, sans-serif; font-size:12px; color:#333; }
+textarea { overflow:auto;}
+
+a img { border:0; max-width: 90%; max-height: 50%;}
+
+a { color:#890000; text-decoration: none; cursor:pointer; }
+a:hover { color:#333; }
+.day2 {
+    padding-bottom: 31px;
+}
+#footer {
+    border-top: dashed 1px cornflowerblue;
+    padding: 10px 0;
+    color: #8e8e8e;
+    width: 1000px;
+    margin: auto;
+}
+.left, .alignleft {
+    float: left;
+    display: inline;
+}
+.right, .alignright {
+    float: right;
+    display: inline-block;
+    padding-top: 0px;
+}
+#footer a {
+    color: #8e8e8e;
+    height: 105px;
+}
+.cl { font-size:0; line-height:0; clear:both; display:block; height:0; }
+
+.al { text-align: left; }
+.ar { text-align: right; }
+.ac { text-align: center; }
+
+h3 { font-size:15px; line-height:18px; color:#bcbcbc; text-transform: uppercase; }
+
+#logo {
+    padding-right: 35%;
+    height: 180%;
+}
+
+#navigation { float:right; white-space:nowrap; }
+#navigation ul{ list-style-type: none; padding-top:30px;}
+#navigation ul li{ float:left; display:inline; border-right:solid 1px #5f5f5f; padding-right:8px; margin-right:8px;}
+#navigation ul li.last{ border-right:0; padding-right:0; margin-right:0;}
+#navigation ul li a{ color:#fff; padding: 10px 15px; margin: 0 -8px;}
+#navigation ul li a:hover {text-decoration: none; color:#ffd900; background:#282923; border-radius: 0.5em;}
+/*#navigation ul li a.active {  }*/
+
+
+.shell { width:980px; margin:0 auto; }
+
+#top { height:479px; background:#000; }
+#header { height:61px; display: flex}
+
+
+#main { max-width:100%; background:url(../../assets/images/main.gif) repeat-x 0 0;}
+
+
+.options a { color:#636363; text-decoration: none; font-size: 20px; font-family: cursive;}
+.options a:hover { color:#890000; text-decoration: none;}
+.options span.left { padding:10px 0 0 0;}
+.options span.more-links { margin-left:2px;}
+.options span.more-links a{ margin-left:9px;}
+
+.d-block {
+    max-height: 410px;
+}
+
+.product-cart .add-to-cart {
+    display: inline-block;
+    border-radius: 0;
+    padding: 8px 8px;
+}
+
+.add-to-cart {
+    display: block;
+    background: #21431e;
+    color: #fff;
+    font-size: 14px;
+    padding: 6px 15px;
+    margin: 8px auto;
+    cursor: pointer;
+    width: 130px;
+}
+
+.service-link a {
+    position: relative;
+    overflow: hidden;
+}
+.link-secondary-wrap {
+    margin-top: 25px;
+}
+.link-category-item {
+    margin-bottom: 10px;
+    display: block;
+    font-weight: normal;
+}
+.post-list-title {
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 35px;
+}
+.container {
+    width: 1200px;
+    /*margin-bottom: 50px;*/
+    margin: 0 auto;
+}
+.post-list-title:after {
+    content: '';
+    border: 1px solid #21431E;
+    display: block;
+    width: 50px;
+    margin: 10px auto;
+}
+a {
+    color: #21431e;
+}
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+.product-wrap {
+    margin: auto;
+    width: 80%;
+    margin-top: 50px;
+}
+.service-link {
+    margin-bottom: 25px;
+    text-align: center;
+    border: dashed 1px cornflowerblue;
+    width: 19%;
+    margin: 0 18px 12px 0;
+    padding: 13px;
+    display: inline-block;
+}
+
+element.style {
+}
+.service-link {
+    margin-bottom: 25px;
+    text-align: center;
+}
+.shop-title {
+    display: block;
+    font-size: 15px;
+    margin-bottom: 3px;
+    height: 23px;
+    overflow: hidden;
+}
+.service-link.col-md-3.col-sm-6.col-xs-12 {
+    max-width: 190px;
+}
+.row {
+    margin: 5% 0 0 15%;
+}
+.cart-link .fa {
+    font-size: 20px;
+}
+.cart-link {
+    margin-right: 25px;
+}
+.cart-amount {
+    font-size: 18px;
+}
+.ajax-message {
+    position: fixed;
+    right: 30px;
+    top: 25px;
+    z-index: 10000000;
+    border: 1px solid #21431ecc;
+    color: #21431ecc;
+    padding: 4px 12px;
+    border-radius: 4px;
+    background: #fff;
+    transition: all 0.3s ease 0s;
+    opacity: 0;
+}
+
+.ajax-message-active {
+    opacity: 1;
+}
+.header-navigation {
+    position: relative;
+    top: 9px;
+}
+
+.trash-icon {
+    display: flex;
+    justify-content: center;
+}
+.fa, .fas {
+    font-weight: 900;
+    color: dodgerblue;
+    font-size: 20px;
+}
+.icon-service-wrap {
+    z-index: 1;
+    position: fixed;
+    right: 20px;
+    top: 30%;
+    list-style: none;
+}
+.icon-service-wrap li {
+    transition: all 0.2s ease-out;
+    margin: 15px 0;
+    vertical-align: middle;
+}
+.icon-service-img {
+    height: 50px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+.fanpage {
+    padding-bottom: 10px;
+    width: 500px;
+}
+.center {
+    border-top: double;
+}
+.gt {
+    margin-left: 200px;
+}
+.brands {
+    display: flex;
+}
+.gt ul {
+    list-style: none;
+}
+.commit {
+    font-family: -webkit-pictograph;
+    font-size: 15px;
+    padding-top: 4px;
+    color: darkblue;
+}
+.fas {
+    color: darkred;
+}
+
+@media(max-width: 767px) {
+    .carousel-item {
+        max-width: 100%;
+        max-height: 18em;
+    }
+    #header {
+        max-width: 90%;
+        padding: 0.3em 1em;
+        height: 35px;
+        margin: auto;
+    }
+    #logo {
+        padding-right: 6%;
+        height: 180%;
+    }
+    .options {
+        max-width: 100%;
+        padding: 0.3em 1em;
+    }
+    #navigation ul {
+        list-style-type: none;
+        padding-top: 5%;
+    }
+    .fanpage {
+        max-width: 35%;
+    }
+    #footer {
+        max-width: 100%;
+        display: block;
+    }
+    img {
+        max-width: 100%;
+    }
+    .gt {
+        margin-left: 26%;
+    }
+    #navigation ul li {
+        padding: 0;
+        margin-right: 0;
+        font-size: 0.4em;
+    }
+    #navigation ul li a {
+        color: #fff;
+        padding: 1em 2.5em;
+        margin: 0 -1.5em;
+    }
+    .carousel {
+        position: relative;
+        max-width: 100%;
+    }
+    #top {
+        height: 21em;
+        background: #000;
+    }
+    .product.container {
+        max-width: 100%;
+    }
+    .shell {
+        width: 100%;
+        margin: 0 auto;
+    }
+    #navigation {
+        max-width: 55%;
+    }
+    #navigation ul li a:hover {
+        text-decoration: none;
+        color:#ffd900;
+        background:#282923;
+        border-radius: 0.5em;
+    }
+    #navigation ul li a {
+        color:#fff;
+        padding: 6px 10px;
+    }
+}
+
