@@ -28,4 +28,23 @@ class User extends Model {
                                                            WHERE username = '$username'");
         return $obj_update->execute([':last_login' => $last_login]);
     }
+
+    public function modify($id) {
+        $obj_modify = $this->connection->prepare("UPDATE users SET avatar=:avatar, first_name=:first_name,
+                                                          last_name=:last_name, phone=:phone, address=:address, email=:email,
+                                                          jobs=:jobs, facebook=:facebook, updated_at=:updated_at
+                                                          WHERE id=$id");
+        $arr_update = [
+          ':avatar' => $this->avatar,
+          ':first_name' => $this->first_name,
+          ':last_name' => $this->last_name,
+          ':phone' => $this->phone,
+          ':address' => $this->address,
+          ':email' => $this->email,
+          ':jobs' => $this->jobs,
+          ':facebook' => $this->facebook,
+          ':updated_at' => $this->updated_at,
+        ];
+        return $obj_modify->execute($arr_update);
+    }
 }

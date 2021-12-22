@@ -41,14 +41,14 @@ if (isset($_SESSION['user'])) {
 
                             <p>
                                 <?php echo $username . ' - ' . $jobs; ?>
-                                <!--Nguyễn Viết Mạnh - Web Developer-->
+                                <!--Nguyễn Đức Huy - Web Developer-->
                                 <small>Thành viên từ năm <?php echo $year; ?></small>
                             </p>
                         </li>
                         <!-- Menu Footer-->
                         <li class="user-footer">
                             <div class="pull-left">
-                                <a href="#" class="btn btn-default btn-flat">Profile</a>
+                                <a href="index.php?controller=user&action=profile" class="btn btn-default btn-flat">Profile</a>
                             </div>
                             <div class="pull-right">
                                 <a href="index.php?controller=user&action=logout" class="btn btn-default btn-flat">Sign
