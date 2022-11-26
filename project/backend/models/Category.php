@@ -84,7 +84,7 @@ class Category extends Model {
         return $obj_select->fetchColumn();
     }
 
-    public function getAllPagination($params = []) {
+    public function getAllPagination($params) {
         $limit = $params['limit'];
         $page = $params['page'];
         $start = ($page - 1) * $limit;
@@ -96,9 +96,6 @@ class Category extends Model {
         }
 
         $obj_select = $this->connection->prepare("SELECT * FROM categories $str_where ORDER BY created_at DESC LIMIT $start, $limit");
-
-        $obj_select->bindParam(':limit', $limit, PDO::PARAM_INT);
-        $obj_select->bindParam(':start', $start,PDO::PARAM_INT);
 
         $obj_select->execute();
         return $categories = $obj_select->fetchAll(PDO::FETCH_ASSOC);

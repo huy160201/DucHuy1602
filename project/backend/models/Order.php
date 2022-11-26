@@ -35,9 +35,9 @@ class Order extends Model {
     }
 
     public  function getById($id) {
-        $obj_selected_id = $this->connection->prepare("SELECT order_details.* FROM order_details INNER JOIN orders
-                                                                ON order_details.order_id = orders.id
-                                                                WHERE order_details.order_id = $id");
+        $obj_selected_id = $this->connection->prepare("SELECT order_detail.* FROM order_detail INNER JOIN orders
+                                                                ON order_detail.order_id = orders.id
+                                                                WHERE order_detail.order_id = $id");
         $obj_selected_id->execute();
         $products = $obj_selected_id->fetchAll(PDO::FETCH_ASSOC);
 

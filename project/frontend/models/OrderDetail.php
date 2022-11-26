@@ -8,7 +8,7 @@ class OrderDetail extends Model {
 
     public function insert() {
         // + viết truy vấn:
-        $obj_insert = $this->connection->prepare("INSERT INTO order_details(order_id, product_name, product_price, quantity) VALUES(:order_id, :product_name, :product_price, :quantity)");
+        $obj_insert = $this->connection->prepare("INSERT INTO order_detail(order_id, product_name, product_price, quantity) VALUES(:order_id, :product_name, :product_price, :quantity)");
         $inserts = [
             ':order_id' => $this->order_id,
             ':product_name' => $this->product_name,

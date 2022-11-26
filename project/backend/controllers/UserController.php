@@ -53,7 +53,7 @@ class UserController extends Controller {
                     $isGetTime = $user_model->timeLogin($username, $last_login);
                     //var_dump($isGetTime);
                     //die();
-                    header('Location: index.php?controller=category');
+                    header('Location: index.php?controller=product');
                     exit();
                 }
             }

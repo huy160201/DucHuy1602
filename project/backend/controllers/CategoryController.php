@@ -11,7 +11,7 @@ class CategoryController extends Controller {
           'query_string' => 'page',
           'controller' => 'category',
           'action' => 'index',
-          'full_mode' => FALSE,
+          'full_mode' => FALSE
         ];
 
         $page = 1;
