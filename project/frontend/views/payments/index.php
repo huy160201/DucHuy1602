@@ -2,7 +2,7 @@
 
 ?>
 <div class="container">
-    <h2>Thanh toán</h2>
+    <h2 style="margin-left: 180px;">Thanh toán</h2>
     <form action="" method="POST">
         <div class="row">
             <div class="col-md-6 col-sm-6">

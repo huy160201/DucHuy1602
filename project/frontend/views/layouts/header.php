@@ -1,15 +1,39 @@
+<?php
+$year = '';
+$username = '';
+$jobs = '';
+$avatar = '';
+if (isset($_SESSION['user'])) {
+    $username = $_SESSION['user']['username'];
+    $jobs = $_SESSION['user']['jobs'];
+    $avatar = $_SESSION['user']['avatar'];
+    $year = date('Y', strtotime($_SESSION['user']['created_at']));
+}
+?>
+
 <div id="top">
     <div class="shell">
         <!-- Header -->
         <div id="header">
-            <div id="logo"><a href="#"><img src="assets/images/logo.gif"></a></div>
+            <div id="logo"><a href="index.php?controller=product&action=index"><img src="assets/images/logo.gif"></a></div>
             <div id="navigation">
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Support</a></li>
-                    <li><a href="#">News</a></li>
-                    <li><a href="#">Courses</a></li>
-                    <li class="last"><a href="#">Contact</a></li>
+                    <li><a href="index.php?controller=product&action=index">Trang chủ</a></li>
+                    <li><a href="#">Hỗ trợ</a></li>
+                    <li><a href="#">Tin tức</a></li>
+                    <?php if ($username === '') { ?>
+                        <li><a href='index.php?controller=user&action=login'>Đăng nhập</a></li>
+                    <?php } else { ?>
+                        <li><a href='index.php?controller=user&action=Logout' onclick="return confirm('Bạn có chắc muốn đăng xuất không ?')">Đăng xuất</a></li>
+                    <?php } ?>
+                    <?php
+                    // echo $username === '' ? "
+                    //         <li><a href='index.php?controller=user&action=login'>Đăng nhập</a></li>
+                    //     " : "
+                    //         <li><a href='index.php?controller=user&action=Logout' onclick='return confirm('')'>Đăng xuất</a></li>
+                    //     "
+                    ?>
+                    <?php echo $username !== '' ? "<li class='last'><a href='index.php?controller=user&action=profile'>$username</a></li>" : "<li class='last'><a href='#'>tài khoản</a></li>" ?>
                 </ul>
             </div>
         </div>
@@ -44,5 +68,3 @@
         <!-- End Slider -->
     </div>
 </div>
-
-
